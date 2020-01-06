@@ -26,7 +26,7 @@
 - MyUSN은 다양한 센서 네트워크 응용에 활용할 수 있도록 다양한 센서와 네트워크 인터페이스 지원
 - MyUSN을 구성하는 패키지 목록 <br/> ![MyUSNConfiguration](./img/MyUSNConfiguration.PNG) </br>
 - MyUSN 패키지 <br/> ![MyUSNPackage](./img/MyUSNPackage.PNG) </br>
-- SG100F
+- **SG100F**
   - FPGA 기반의8051 MUC와 JPEG encoder를 중심으로 UART, Ethernet, ZigBee, WiFi 등의 통신 모듈과 오도, 조도, 연기, 기압, 동작, 거리, 터치, 온습도, 이미지 등의 센서 모듈 및 LCD, LED와 Push Switch 등 다양한 입출력 소자들 포함
   - 메모리맵
     - SG100F의 FPGA에는 8bit MCU인 SU8051과 JPEG encoder가 내장되어 있음
@@ -66,5 +66,5 @@
       - 이미지 센서 (Image Sensor)
   - 통신부
   - 입출력부
-- SN100S
-- MyUSN 하드웨어 연결
+- **SN100S**
+- **MyUSN 하드웨어 연결**
