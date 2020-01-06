@@ -99,6 +99,16 @@
   - 3단계 internal calibration speed 선택
   - 병렬 작업을 위한 동기화 기능
   - 다양한 옵션 선택을 위한 5개의 SYNC 핀
-  - 
-### 온습도 센서 (Humidity & Temperature Sensor) &#91;GL5537&#93;
+  - 적은 외부 구성 요소로 작동
+  - Open-drain digital output
+  - 저전력 소비
+  - Embedded common and normal noise elimination circuit
+### 온습도 센서 (Humidity & Temperature Sensor) &#91;SHT11&#93;
+- -40&deg;C ~ 123.8&deg;C의 온도 측정 범위와 0~100%RH의 상대 습도 측정 범위를 갖는 멀티 센터 모듈
+- 내장된 14bit ADC를 통해 측정 데이터가 디지털 신호로 변환된 후 2-wire 시리얼 인터페이스로 출력
+- SG100F와 SN100S에서 MCU(SU8051)의 P1.6과 P1.7에 SHT11의 DATA와 SCK 신호가 각각 연결되어 있으며, 사용자는 해당 Port 제어를 통하여 SHT11 동작 제어 가능
+- **SHT11** 특징
+  - 한 반도체 칩 위에 두 개의 센서 내장 : 온도 & 상대 습도
+  - 측정 범위 : 온도 -40&deg;C ~ 123.8&deg;C, 습도 0~100%RH
+  - 상대 습도 정밀도 : &plusmn;3.5%
 ### 이미지 센서 (Image Sensor) &#91;GL5537&#93;
