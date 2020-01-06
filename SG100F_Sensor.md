@@ -96,6 +96,9 @@
   - 선택 가능한 출력 작동 모드 (single/multi/dual single output)
   - 선택 가능한 출력 레벨 (active high / active low / analog voltage output)
   - 균일하게 조절 가능한 9단계 민감도
-  - 3단계
+  - 3단계 internal calibration speed 선택
+  - 병렬 작업을 위한 동기화 기능
+  - 다양한 옵션 선택을 위한 5개의 SYNC 핀
+  - 
 ### 온습도 센서 (Humidity & Temperature Sensor) &#91;GL5537&#93;
 ### 이미지 센서 (Image Sensor) &#91;GL5537&#93;
