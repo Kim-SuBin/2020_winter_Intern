@@ -127,4 +127,5 @@
   - Max frame rate : 30fps@VGA
   - Output format : YUV 4:2:2, RGB 5:6:5, RGB 4:4:4
   - Resolution: 640H x 480V (VGA)
-  - Windowing
+  - Windowing : programmable
+  - Dynamic Range : 60dB
