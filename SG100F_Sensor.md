@@ -51,8 +51,33 @@
   - Durable Thermoplastic (PPS) Surface Mount Package
   - 기압 측정 범위 : 15 ~ 115kPa (2.2 ~ 16.7psi)
   - 출력 전압 (Vout) : 0.2~4.8V
-  - 정확도 : 
-### PIR 센서 (Pyroelectric Infrared Ray Sensor) &#91;GL5537&#93;
+  - 정확도 : &#177;1.5% FSS
+  - 작동 온도 : -40 ~ 125&deg;C
+### PIR 센서 (Pyroelectric Infrared Ray Sensor) &#91;D203B&#93;
+- D203B는 초전센서(Pyroelectric sensor)로써 초전재료를 사용하여 온도 변화에 따라 변하는 자발분극의 특성을 이용하여 적외선을 검출하는 센서
+- PIR 센서는 내장된 Element 수에 따라 구분
+  - Single Element : 주로 비접촉 온도계, Gas 분석기에 응용
+  - Dual Element : 보편적으로 가장 많이 사용되며 경보기, 조명 분야에 주로 많이 사용
+  - Multi Element : 고가, 특수 용도의 경보기에 사용
+- PIR 센서는 일반적으로 움직임 감지, 열선 감지 센서라고 하는데, 물체(인체)에서 발산되는 적외선(열)을 감지하는 것을 의미
+- PIR 센서를 이용한 감지기는 Fresnel Lens(프레넬 렌즈)에 의해 결정되는 감시영역 내에 외부 조건에 의해 온도 변화가 발생하면 이 온도 변화량을 초전소자가 전기적 신호로 전화한 후, 정해진 일정 기준(신호 크기/펄스 발생수) 이상이 되었을 때 움직임을 외부에 알리는 감지기
+- PIR 센서를 이용한 감지기는 Fresnel Lens부와 Pyroelectric sensor부와 신호 처리부로 구성
+- Freselnel Lense는 여루언체의 열에너지를 집광하는 역할을 하며, 입사한 에너지를 Pyroelectric sensor에서 전기적 신호로 바꾸어주며, 신호처리부에서 센서로부터 나오는 신호를 증폭하는 역할
+- SG100F에서는 PIR 센서 출력 데이터가 ADC 칩을 통해 디지털 신호로 변환되어 FPGA 내부의 MCU(SU8051)에 입력됨
+- **D203B** 특징
+  - IR 수신전극 : 2x1mm, 2개 소자
+  - 윈도 크기 : 5x3.8mm
+  - 투과율 : &ge;75%
+  - 감도 : &ge;3300V/W
+  - 잡음 &#91;Vp-p&#93; : %lt;70mV
+  - 오프셋 전압 :0.3~1.2V
+  - 사용 온도 : -30~70&deg;C
+  - 스펙트럼 응답 : 5~14&mu;m
+  - 출력 신호 &#91;Vp-p&#93; : &ge;3500mV
+  - 검출능 (D	&#42;) : &ge;1.4x10<sup>8</sup>cmHx/W
+  - 출력 균형 :
+  - 전원 전압 :
+  - 보존 온도 :
 ### 거리 센서 (Distance Sensor) &#91;GL5537&#93;
 ### 터치 센서 (Touch Sensor) &#91;GL5537&#93;
 ### 온습도 센서 (Humidity & Temperature Sensor) &#91;GL5537&#93;
