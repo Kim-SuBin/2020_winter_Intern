@@ -1,8 +1,8 @@
 # USN system study
 (셀로코 인턴. 2020.01.06 - 2020.02.28)    
 'USN 시스템 기초실습 및 응용 - 영상 복합센서 네트워크 솔루션'에 대해 공부한 내용을 기록한다.  
-[셀로코(주)](https://selocoinc.wixsite.com/seloco)
-[SELOCO](http://www.seloco.com/USN-IoT/iSafes.asp)
+[셀로코(주)](https://selocoinc.wixsite.com/seloco)  
+[SELOCO](http://www.seloco.com/USN-IoT/iSafes.asp)  
 
 ### USN(Ubiquitous Sensor Network, 유비쿼터스 센서 네트워크)
 - 각종 센서에서 수집한 정보를 유무선 통신 방법으로 수집 처리할 수 있게 구성한 네트워크
