@@ -50,7 +50,7 @@
     - 각 센서들의 인터페이스와 특징
       - 온도 센서 (Temperature Sensor) &#91;LM35DZ&#93;
         - Wafer-level 트리밍과 보정으로 가격 저렴
-        - 비선형 범위가 &#177;1/4&deg;
+        - 비선형 범위가 &#177;1/4&deg;C 
       - 조도 센서 (Visible Light Sensor)
       - 연기 센서 (Smoke Sensor)
       - 기압 센서 (Pressure Sensor)
