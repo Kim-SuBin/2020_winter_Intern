@@ -129,3 +129,7 @@
   - Resolution: 640H x 480V (VGA)
   - Windowing : programmable
   - Dynamic Range : 60dB
+  - Fixed Frame Rate / Variable Frame Rate
+  - Sub-sample : 1/4 (QVGA)
+  - Image scaling : 1x ~ 16x
+  - Power consumption : Typical
