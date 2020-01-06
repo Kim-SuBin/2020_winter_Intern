@@ -50,8 +50,10 @@
     - [각 센서들의 인터페이스와 특징](https://github.com/Kim-SuBin/USN_system_study/blob/master/SG100F_Sensor.md)
   - 통신부
     - UART
-      - 
+      - 2개의 스위치 소자의 enable신호를 제어하여 Host PC &leftrightarrow; MCU, MCU &leftrightarrow; ZigBee, Host PC &leftrightarrow; ZigBee 간의 UART 통신을 수행하도록 설정
+      - SU8051 프로그래밍을 통한 스위치 제어가 아니라 수동으로 제어할 수 있도록 제공되는 DIP 스위치(SW4)를 조작하면 Host PC &leftrightarrow; MCU 간의 UART 통신을 수행하도록 설정 가능
     - ZigBee (LM2455-EM)
+      - 
     - Ethernet
   - 입출력부
 - **SN100S**
