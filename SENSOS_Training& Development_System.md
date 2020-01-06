@@ -28,6 +28,29 @@
 - MyUSN 패키지 <br/> ![MyUSNPackage](./img/MyUSNPackage.PNG) </br>
 - SG100F
   - FPGA 기반의8051 MUC와 JPEG encoder를 중심으로 UART, Ethernet, ZigBee, WiFi 등의 통신 모듈과 오도, 조도, 연기, 기압, 동작, 거리, 터치, 온습도, 이미지 등의 센서 모듈 및 LCD, LED와 Push Switch 등 다양한 입출력 소자들 포함
-  
+  - 메모리맵
+    - SG100F의 FPGA에는 8bit MCU인 SU8051과 JPEG encoder가 내장되어 있음
+    - 64kByte의 프로그램 메모리와 64kByte의 외부 데이터 메모리를 갖고 있음
+    - 프로로그램 메모리 : 사용자가 만든 응용 프로그램이 저자오디는 메모리, Pm39LV010 Flash 메모리 적용
+    - 외부 데이터 메모리 : 프로그램 수행 중 필요한 데이터 저장용 메모리, IDT71V124SA SRAM 적용
+    - 데이터 메모리 : 8000h ~ FFFFh (9p ~ 11p)
+      - E000h ~ FFFFh : Ethernet 통신 데이터 수신용 내부 buffer 영역
+      - C000h ~ DFFFh : Ethernet 통신 데이터 송신용 내부 buffer 영역
+      - A300h ~ A3FFh : RTC(Real Time Clock) 모듈 구동을 위한 영역
+      - A000h ~ A2FFh : IO Select 영역
+      - 9400h ~ 97FFh : 간접 어드레싱 방식에 의한 JPCON 제어 영역
+      - 8000h ~ 8FFFh : Ethernet 제어 관련 영역
+  - Clock 인터페이스
+    - SG100F는 안정적인 동작 클럭(Clock) 공급을 위해 48MHz OSC를 이용
+    - FPGA 내부에서 클럭을 관리하는 리소스인 DCM(Digital Clock Management) 모듈을 통하여 22.1184MHz로 변환시켜 MCU 블록과 JPEG 블록에 제공
+    -  SU8051 MCU와 JPEG encoder의 동작 주파수는 22.1884MHz이며, CMOS 이미지 센서 모듈에는 22.1184MHz의 클럭이 공급됨
+  - 센서부
+    - SG100F에는 총 9종의 센서가 장착되어 있음
+    - FPGA에 직접 연결되어 있는 CMOS 이미지 센서와 온습도 센서를 제외하고 기압, 온도, 조도, 움직임, 연기, 거리, 터치 세서는 아날로그 출력값을 갖기 때문에 별도의 ADC IC와 연결되어 있음
+    - 각 센서들의 인터페이스와 특징
+      - 온도(Temperature) 센서 &#91;LM35DZ&#93;
+      - 조도 센서 ()
+  - 통신부
+  - 입출력부
 - SN100S
 -MyUSN 하드웨어 연결
