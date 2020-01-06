@@ -117,4 +117,7 @@
   - 저전력 소비 (typ. 30&mu;W)
   - 뛰어난 장기 안정성
   - 보정과 디지털 2-wire 인터페이스 기능으로 사용이 
-### 이미지 센서 (Image Sensor) &#91;GL5537&#93;
+### 이미지 센서 (Image Sensor) &#91;YACBAC1SDDAS&#93;
+- 전자 필름 역할
+- Micron Lens를 거쳐 Color Filter Array()
+- **YACBAC1SDDAS** 특징
