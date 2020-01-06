@@ -27,6 +27,7 @@
 - MyUSN을 구성하는 패키지 목록 <br/> ![MyUSNConfiguration](./img/MyUSNConfiguration.PNG) </br>
 - MyUSN 패키지 <br/> ![MyUSNPackage](./img/MyUSNPackage.PNG) </br>
 - SG100F
-  - FPGA 기반의8051 MUC와 JPEG encoder를 중심으로 UART, Ethernet, ZigBee, WiFi 등의 통신 모듈과 오도, 조도, 연기, 기압, 동작, 거리, 터치, 온습도, 이미지 등의 센서 모듈 및 LCD, LED와 Push Switch 등 다양한 입출력 소자들 포함 <br/> ![SG100F](./img/SG100F.PNG) </br>
+  - FPGA 기반의8051 MUC와 JPEG encoder를 중심으로 UART, Ethernet, ZigBee, WiFi 등의 통신 모듈과 오도, 조도, 연기, 기압, 동작, 거리, 터치, 온습도, 이미지 등의 센서 모듈 및 LCD, LED와 Push Switch 등 다양한 입출력 소자들 포함
+  
 - SN100S
 -MyUSN 하드웨어 연결
