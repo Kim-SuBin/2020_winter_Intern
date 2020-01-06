@@ -120,7 +120,7 @@
 ### 이미지 센서 (Image Sensor) &#91;YACBAC1SDDAS&#93;
 - 전자 필름 역할
 - Micron Lens를 거쳐 Color Filter Array(CFA)를 통과한 빛이 Bayer Pattern으로 구성되어 있는 pixel 위에 상이 맺히고 이것이 전기적 신호로 변경되어 아날로그 영상 신호로 완성되고 이것이 ADC를 통해 디지털 데이터로 변환되어 출력됨
-- YACBAC1SDDAS는 ISP가 내장되어 있어서 YUV 형태의 raw 이미지 영상 데이터 Y_0 ~ Y_7을 출력. 이때 HSYNC, VSYNC, PCLK 등의 제어신도호 함께 출력
+- YACBAC1SDDAS는 ISP가 내장되어 있어서 YUV 형태의 raw 이미지 영상 데이터 Y_0 ~ Y_7을 출력. 이때 HSYNC(Horizontal Synchronization, 수평 동기화), VSYNC(Vertical Synchronization, 수직 동기화), PCLK(Pixel Clock) 등의 제어신도호 함께 출력
 - 이미지 센서는 별도의 옵션 보드에 장착되어 SG100F에 연결
 - **YACBAC1SDDAS** 특징
   - Master clock : 12 ~ 24MHz
@@ -132,4 +132,4 @@
   - Fixed Frame Rate / Variable Frame Rate
   - Sub-sample : 1/4 (QVGA)
   - Image scaling : 1x ~ 16x
-  - Power consumption : Typical
+  - Power consumption : Typical 100mW(@24MHz)
