@@ -25,4 +25,4 @@
 ### MyUSN 구성
 - MyUSN은 다양한 센서 네트워크 응용에 활용할 수 있도록 다양한 센서와 네트워크 인터페이스 지원
 - MyUSN을 구성하는 패키지 목록 <br/> ![MyUSNConfiguration](./img/MyUSNConfiguration.PNG) </br>
-- MyUSN 패키지 <br/> ![MyUSNPackage](.img/MyUSNPackage.PNG) </br>
+- MyUSN 패키지 <br/> ![MyUSNPackage](./img/MyUSNPackage.PNG) </br>
