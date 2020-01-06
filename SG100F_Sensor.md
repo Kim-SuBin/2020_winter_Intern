@@ -49,7 +49,7 @@
   - 마이크로프로세서(Microprocessor) 또는 마이크로컨트롤러(Microcontroller) 기반 시스템에 적합
   - Temperature Compensated from -40&deg; to +125&deg;C
   - Durable Thermoplastic (PPS) Surface Mount Package
-  - 기압 측정 범위 : 15~115kPa (2.2~16.7psi)
+  - 기압 측정 범위 : 15 ~ 115kPa (2.2 ~ 16.7psi)
   - 출력 전압 (Vout) : 0.2~4.8V
   - 정확도 : 
 ### PIR 센서 (Pyroelectric Infrared Ray Sensor) &#91;GL5537&#93;
