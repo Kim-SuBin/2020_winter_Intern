@@ -113,9 +113,11 @@
       - 출력소자 연결 시 : FPGA의 보호와 안정적인 동작을 위해 풀업 저항 권장
       - 입력소자 연결 시 : FPGA를 손상시키지 않도록 직렬 저항 설치
     - Switch
+    
       |Part Name|SWITCH Name|Description|
       |:===:|:===:|:===:|
       |SW1|FPGA configuration S/W	|ON : JTAC mode <br> OFF : operation mode </br>|
+      
       SW2	Power S/W	ON : Power ON
 OFF : Power OFF
 SW3	RESET push S/W	Reset switch
