@@ -113,29 +113,31 @@
       - 출력소자 연결 시 : FPGA의 보호와 안정적인 동작을 위해 풀업 저항 권장
       - 입력소자 연결 시 : FPGA를 손상시키지 않도록 직렬 저항 설치
     - Switch
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[]
-\begin{tabular}{|
->{\columncolor[HTML]{FFFFFF}}c |
->{\columncolor[HTML]{FFFFFF}}c |
->{\columncolor[HTML]{FFFFFF}}c |}
-\hline
-{\color[HTML]{000000} \textbf{Part Name}} & {\color[HTML]{000000} \textbf{SWITCH Name}}                                                               & {\color[HTML]{000000} \textbf{Description}}                                                                                                                                        \\ \hline
-{\color[HTML]{000000} SW1}                & {\color[HTML]{000000} FPGA configuration S/W}                                                             & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ON : JTAC mode\\ OFF : operation mode\end{tabular}}                                                                               \\ \hline
-{\color[HTML]{000000} SW2}                & {\color[HTML]{000000} Power S/W}                                                                          & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ON : Power ON\\ OFF : Power OFF\end{tabular}}                                                                                     \\ \hline
-{\color[HTML]{000000} SW3}                & {\color[HTML]{000000} RESET push S/W}                                                                     & {\color[HTML]{000000} Reset switch}                                                                                                                                                \\ \hline
-{\color[HTML]{000000} SW4}                & {\color[HTML]{000000} Serial 통신 Manual S/W}                                                               & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1 : 스위치 회로 소자 전원 ON/OFF\\ 2 : Port3.1(TXD) manually connection ON/OFF\\ 3 : Port3.0(RXD) manually connection ON/OFF\end{tabular}} \\ \hline
-{\color[HTML]{000000} SW5}                & {\color[HTML]{000000} ZigBee ISP S/W}                                                                     & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ON : ISP mode\\ OFF : normal mode\end{tabular}}                                                                                   \\ \hline
-{\color[HTML]{000000} SW6}                & {\color[HTML]{000000} LCD \& FND Power S/W}                                                               & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1 : LCD power ON/OFF\\ 2 : FND power ON/OFF\end{tabular}}                                                                         \\ \hline
-{\color[HTML]{000000} SW7}                & {\color[HTML]{000000} Port3.2(/INT0) push S/W}                                                            & {\color[HTML]{000000} Port3.2 switch}                                                                                                                                              \\ \hline
-{\color[HTML]{000000} SW8}                & {\color[HTML]{000000} Port3.3(/INT1) push S/W}                                                            & {\color[HTML]{000000} Port3.3 switch}                                                                                                                                              \\ \hline
-{\color[HTML]{000000} SW27}               & {\color[HTML]{000000} ISP mode S/W}                                                                       & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ON : ZigBee programming 설정\\ OFF : Flash programming 설정\end{tabular}}                                                             \\ \hline
-{\color[HTML]{000000} SW28}               & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Ethernet/WiFi SELECT S/W\\ (TXOP, TXON 신호)\end{tabular}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1-2(UP) : Ethernet SELECT\\ 2-3(DOWN) : WiFi SELECt\end{tabular}}                                                                 \\ \hline
-{\color[HTML]{000000} SW29}               & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Ethernet/WiFi SELECT S/W\\ (RXIP, RXIN 신호)\end{tabular}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1-2(UP) : Ethernet SELECT\\ 2-3(DOWN) : WiFi SELECT\end{tabular}}                                                                 \\ \hline
-\end{tabular}
-\end{table}
+|Part Name|SWITCH Name|Description|
+|:===:|:===:|:===:|
+|SW1|FPGA configuration S/W	|ON : JTAC mode <br> OFF : operation mode </br>|
+SW2	Power S/W	ON : Power ON
+OFF : Power OFF
+SW3	RESET push S/W	Reset switch
+SW4	Serial 통신 Manual S/W	1 : 스위치 회로 소자 전원 ON/OFF
+2 : Port3.1(TXD) manually connection ON/OFF
+3 : Port3.0(RXD) manually connection ON/OFF
+
+SW5	ZigBee ISP S/W	ON : ISP mode
+OFF : normal mode
+SW6	LCD & FND Power S/W	1 : LCD power ON/OFF
+2 : FND power ON/OFF
+
+SW7	Port3.2(/INT0) push S/W	Port3.2 switch
+SW8	Port3.3(/INT1) push S/W	Port3.3 switch
+SW27	ISP mode S/W	ON : ZigBee programming 설정
+OFF : Flash programming 설정
+SW28	Ethernet/WiFi SELECT S/W
+(TXOP, TXON 신호)	1-2(UP) : Ethernet SELECT
+2-3(DOWN) : WiFi SELECt
+SW29	Ethernet/WiFi SELECT S/W
+(RXIP, RXIN 신호)	1-2(UP) : Ethernet SELECT
+2-3(DOWN) : WiFi SELECT
     - RTC(Real Time Clock)부
       - RTC 모듈 DS12C887은 별도의 어드레스 입력이 없으며 내부에 배터리가 내장되어 있어 외부 전원공급 없이 10년 동안 동작 가능
       - 비휘발성 메모리 113바이트가 있어서 전원이 없어도 데이터 값이 지워지지 않음
