@@ -55,7 +55,20 @@
   - PSW(Program Status Word) 레지스터(D0h) : 프로그램의 수행 결과에 따라서 연산 처리 결과를 나타내는 레지스터
   - IP(Interrupt Priority) 레지스터(B8h) : 인터럽트 제어 우선순위 레지스터로서 각 비트 set 또는 reset하여 인터럽트 요구에 대하여 높은 레벨, 낮은 레벨 등의 순위 결정
   - IE(Interrupt Enable) 레지스터(A8h) : 인터럽트의 사용 유무를 결정하느 레지스터로 모든 인터럽트를 사용하도록 설정해주는 인에이블 비트와 각가그이 개별 인터럽트를 설정해주는 제어비트 7개로 구성
-  
+  - PCON 레지스터(87h) : 파워를 제어하는 레지스터이며, 여기서는 SMOD 셋팅만 설정 가능. (SMOD 비트는 2배의 boud rate를 발생시키는 데 이용)
+  - SCON(Serial Control) 레지스터(98h) : 시리얼 포트 제어와 시리얼 포트의 상태를 감시하기 위한 레지스터이며, 비트 또는 바이트 단위로 엑세스 가능
+  - TCON(Timer Control) 레지스터(88h) : 타이머/카운터를 어떻게 사용할 거인가를 결정하기 위해 사용되는 상위 4bit와 외부 인터럽트를 어떻게 사용할 것인가를 결정하는 하위 4bit로 구성
+  - TMOD(Timer Mode) 레지스터(89h) : 타이머/카운터를 어떻게 사용할 것인가를 결정하며, 각각의 타이머/카운터를 결정하는 데 사용하는 레지스터
+
 ### JPCON 소개
+- UC5000C의 영상처리를 담당하는 IP이며 JPEG encoder와 영상 저장 메모리와 제어부로 구성
+- 외부 CIS(CMOS Image Sensor)센서에서 입력된 영상 data를 JPEG 형태로 변환해주고 이를 내부의 영상 저장 메모리에 저장한 후 SU8051의 명령에 따라 영상데이터를 외부 데이터 메모리에 출력해주는 기능 수행
 - 특징
+  - encoding되는 영상 데이터는 JPEG 표준에 호환
+  - VGA, CIF, QvGA 해상도 지원
+  - Supported chroma sub-sampling format : 4:2:2
+  - 32kByte 크기까지 JPEG 영상 데이터를 저장할 수 있는 메모리 내장
+  - Support CIS sensor : Hynix YACBAC1SDDAS
+  - 직접/간접 어드레싱 방식으로 외부 CIS 센서 제어
 - 인터페이스
+  - 외부적으로는 이미지센서와의 인터페이스, 내부적으로는 SU8051과 ADDRDE, LATCH 블록과의 인터페이스로 구분
