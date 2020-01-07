@@ -160,7 +160,36 @@
       - 동작 센서 D203B와 아날로그 입력 신호를 증폭해주는 2단 증폭기 등으로 구성되어 있음
       - 특징
         - 감지 거리 : 최대 5m 이내
-        - 감지 각도 : 수평 &pm;50&deg;C
+        - 감지 각도 : 수평 &pm;50&deg;, 수직 &pm;30&deg;
+        - 오프셋 전압 : 0.3 ~ 1.2V
+        - 사용 온도 : -30 ~ +70&deg;C
     - S0100D (거리 센서)
+      - 거리 감지를 위해 IR 신호 기반의 거리 센서가 장착된 옵션 모듈
+      - 거리 센서 GP2Y0A21와 전원 noise 방지회로 등으로 구성
+      - 특징
+        - Detecting distance : 10 ~ 80cm
+        - Difference of output : 1.6V ~ 2.15V (Output change at L=80cm to 10cm)
+        - 동작 온도 : -10 ~ +60&deg;C
     - WIZ801MJ (TCP/IP 모듈)
-- **MyUSN 하드웨어 연결**
+      - WIZNET W5100칩과 MAC-JACK 등으로 구성된 TCP/IP 통신용 네트워크 모듈
+      - 빠르게 인터넷을 사용할 수 있는 시스템 개발에 적합
+      - 특징
+        - Support 10/100 Base TX
+        - Suppoert half/full duplex operation
+        - Supports auto-negotiation and auto crossover detection
+        - IEEE 802.3/802.3u complaints
+        - Operates 3.3V with 5V I/O signal tolerance
+        - Supports network status indicator LEDs
+        - Includes Hardware Internet protocols : TCP, IP Ver.4, UDP, ICMP, ARP, PPPoE, IGMP
+        - Includes Hardware Ethernet protocols : DLC, MAC
+        - Supports 4 independent connections simultaneously
+        - Supports MCU bus Interface and SPI Interface
+        - Supports Direct/Indirect mode busaccess
+        - Supports Socket API for easy application programming
+        - Interfaces with Two 2.0mm pitch 2 &ast; 14 header pin
+        - Temperature : 0 ~ 70&deg;C (Operation), -40 ~ 85&deg;C (Storage)
+- **MyUSN 하드웨어 연결 주의 사항**
+  - 전원 공급은 장비와 함꼐 제공된 DC 5V/2A 어댑터 사용 권장
+  - 장비와 PC를 USB 또는 Serial 케이블로 연결할 때는 반드시 장비의 원스위치를 OFF 한 상태에서 연결
+  - SG100F에 장착된 FPGA는 휘발성 디바이스로써 전원이 끊어지면 내부 데이터가 지워짐
+  - SG100F의 SW1에서 JTAG 모드는 Configuration PROM에 서례 데이터를 저장하기 위한 
