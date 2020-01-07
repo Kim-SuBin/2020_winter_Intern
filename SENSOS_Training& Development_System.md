@@ -113,37 +113,54 @@
       - 출력소자 연결 시 : FPGA의 보호와 안정적인 동작을 위해 풀업 저항 권장
       - 입력소자 연결 시 : FPGA를 손상시키지 않도록 직렬 저항 설치
     - Switch
-    
-      |Part Name|SWITCH Name|Description|
-      |:===:|:===:|:===:|
-      |SW1|FPGA configuration S/W	|ON : JTAC mode <br> OFF : operation mode </br>|
-      
-      SW2	Power S/W	ON : Power ON
-OFF : Power OFF
-SW3	RESET push S/W	Reset switch
-SW4	Serial 통신 Manual S/W	1 : 스위치 회로 소자 전원 ON/OFF
-2 : Port3.1(TXD) manually connection ON/OFF
-3 : Port3.0(RXD) manually connection ON/OFF
-
-SW5	ZigBee ISP S/W	ON : ISP mode
-OFF : normal mode
-SW6	LCD & FND Power S/W	1 : LCD power ON/OFF
-2 : FND power ON/OFF
-
-SW7	Port3.2(/INT0) push S/W	Port3.2 switch
-SW8	Port3.3(/INT1) push S/W	Port3.3 switch
-SW27	ISP mode S/W	ON : ZigBee programming 설정
-OFF : Flash programming 설정
-SW28	Ethernet/WiFi SELECT S/W
-(TXOP, TXON 신호)	1-2(UP) : Ethernet SELECT
-2-3(DOWN) : WiFi SELECt
-SW29	Ethernet/WiFi SELECT S/W
-(RXIP, RXIN 신호)	1-2(UP) : Ethernet SELECT
-2-3(DOWN) : WiFi SELECT
     - RTC(Real Time Clock)부
       - RTC 모듈 DS12C887은 별도의 어드레스 입력이 없으며 내부에 배터리가 내장되어 있어 외부 전원공급 없이 10년 동안 동작 가능
       - 비휘발성 메모리 113바이트가 있어서 전원이 없어도 데이터 값이 지워지지 않음
       - 8-bit 데이터 버스에 연결되어 있으며 FPGA에 내장된 8-bit MCU의 제어에 의해 LCD 모듈로 시간 정보를 출력해 볼 수 있음 (DATA, /RD, /WR, ALE, /RTC_CS)
 - **SN100S**
-
+  - 셀로코(주)에서 자체 개발한 USN SOC인 UC5000C_R2 칩이 메인 프로세서로 장착되어 있음
+  - 영상 복합 센서 네트워크 시스템의 센서 노드로 사용하기 적합하도록 SG100F의 다양한 센서와 입출력 방식 중에 선별하여 적용
+  - 센서부는 USN용 센서 노드에서 가장 응용처가 많은 온도/습도/조도 센서와 영상 센서노드에 필수인 이미지 센서를 기본으로 장착, 움직임 센서와 거리 센서는 별도 옵션보드로 제공함으로써 사용자 요구에 따라 확장 가능
+  - 통신부는 ZigBee 모듈을 기본으로 장착하였고 Ethernet 통신 모듈은 옵션보드로 제공되어 필요에 따라 확장 가능
+  - 사용자 응용 프로그램을 SN100S의 Flash 메모리에 다운로드 하기 위한 Writer 모듈도 옵션보드로 함께 제공
+  - 메모리 맵
+    - 64kByte의 프로그램 메모리와 64kByte의 외부 데이터 메모리 영역으로 구성
+    - 프로그램 메모리는 프로그램이 들어가는 메모리이며 SG100F와 같이 Pm39LV010 Flash 메모리가 사용되고 있음
+    - 외부 데이터 메모리는 프로그램 수행 중에 사용되는 데이터를 읽고 쓰는 메모리
+      - E000h ~ FFFFh : Ethernet 통신 데이터 수신용 내부 buffer 영역
+      - C000h ~ DFFFh : Ethernet 통신 데이터 송신용 내부 buffer 영역
+      - 9400h ~ 97FFh : 간접 어드레싱 방식에 의한 JPCON 제어 영역
+  - 통신부
+    - UART
+      - USB to dual UART Bridges 칩(CP2105)를 사용하여 2개의 시리얼 포트 설정 가능
+      - 하나는 ZigBee 모듈과 Flash 메모리를 프로그래밍 할 때 사용
+      - 다른 하나는 FPGA와 ZigBee 모듈 간의 시리얼 통신을 위해 사용
+    - ZigBee부 (RP-MR500)
+      - RP-MR500은 2.4GHz RF 트랜시버, 베이스밴드 모뎀, 하드웨어 MAC, 8051 MCU, 플래시 메모리 내장, 칩 안테나가 부착된 IEEE802.15.4 기반의 ZigBee 모듈
+      - RP-MR500은 최신 세라믹 칩 안테나를 사용하여 RF출력은 최대 8dB (typical 5dB) 정도
+      - LM2455-EM 모듈보다 크기를 대폭 줄인 SMT 형태로 개발되어 구성품의 소형화가 필요한 SN100S에 적용하기 적합
+      - IO 신호들도 LM2455-EM과 바로 호환 가능
+  - 입출력부
+    - PUSH Switch
+      - SN100S는 외부 입력 제어를 위한 1개의 PUSH 스위치 지워
+      - UC5000C chip 내부 8bit MCU의 외부 인터럽트0(p3.2)신호로 연결
+    - LED
+      - 다양한 종류의 데이터를 diplay하기 위해제공
+      - LED를 켜기 위해서는 해당 포트핀은 low가 되어야 함
+  - 옵션보드
+    - S0100W (Sensor Node Writer 모듈)
+      - SN100S에 장착된 Flash memory를 프로그래밍하는 Sensor Node용 모듈
+      - 특징
+        - SN100S 프로그래밍 가능
+        - PC 연결 시 USB to UART Bridge 포트로 인식
+        - ISP 전용 AVR 탑재
+        - 동작 확인용 LED
+    - S0100R (움직임 센서)
+      - 인체 감지 및 움직임 감지를 위해 동작 센서, Fresnel Lens를 적용한 동작 센서 모듈
+      - 동작 센서 D203B와 아날로그 입력 신호를 증폭해주는 2단 증폭기 등으로 구성되어 있음
+      - 특징
+        - 감지 거리 : 최대 5m 이내
+        - 감지 각도 : 수평 &pm;50&deg;C
+    - S0100D (거리 센서)
+    - WIZ801MJ (TCP/IP 모듈)
 - **MyUSN 하드웨어 연결**
