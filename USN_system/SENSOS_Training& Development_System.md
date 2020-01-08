@@ -47,7 +47,7 @@
   - 센서부
     - SG100F에는 총 9종의 센서가 장착되어 있음
     - FPGA에 직접 연결되어 있는 CMOS 이미지 센서와 온습도 센서를 제외하고 기압, 온도, 조도, 움직임, 연기, 거리, 터치 세서는 아날로그 출력값을 갖기 때문에 별도의 ADC IC와 연결되어 있음
-    - [각 센서들의 인터페이스와 특징](https://github.com/Kim-SuBin/USN_system_study/blob/master/SG100F_Sensor.md)
+    - [각 센서들의 인터페이스와 특징](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/USN_system/SG100F_Sensor.md)
   - 통신부
     - UART
       - 2개의 스위치 소자의 enable신호를 제어하여 Host PC &leftrightarrow; MCU, MCU &leftrightarrow; ZigBee, Host PC &leftrightarrow; ZigBee 간의 UART 통신을 수행하도록 설정
