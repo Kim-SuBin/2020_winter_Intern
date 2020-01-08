@@ -15,6 +15,7 @@
 |Big Data 처리 전략|Brain OS (소프트웨어 접근)|시스템 OS (하드웨어 접근)|
 |알고리즘|Machine Learning 알고리즘 중심|언어학적 접근/확률 통계적 분석|
 
-- 출저
-http://www.itnews.or.kr/?p=18241  
+- 출처 <br>
+https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5 <br>
+http://www.itnews.or.kr/?p=18241 <br>
 http://www.dt.co.kr/contents.html?article_no=2017031702101860041001
