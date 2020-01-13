@@ -18,5 +18,6 @@
 -	Flash를 클릭한다. 약 10분~30분 정도 소요된다
 
 ### Insert Micro SD Card into Jetson Nano
+![InsertMicroSD](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/InsertMicroSD.PNG)
 
 ### Jetson Nano Power Connection
