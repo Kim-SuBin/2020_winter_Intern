@@ -20,4 +20,5 @@
 ### Insert Micro SD Card into Jetson Nano
 ![InsertMicroSD](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/InsertMicroSD.PNG)
 
+
 ### Jetson Nano Power Connection
