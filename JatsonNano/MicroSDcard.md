@@ -1,8 +1,8 @@
 # Micro SD Card
 
 ### Micro SD Card Format
-- SD Card Formatter를 다운로드 하고 설치한다 : <br> https://www.sdcard.org/downloads/formatter_4/eula_windows/
-![SDcardFormatter]()
+- SD Card Formatter를 다운로드 하고 설치한다 : <br> https://www.sdcard.org/downloads/formatter_4/eula_windows/ <br>
+![SDcardFormatter](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/MicroSDcard.png)
 - SD 카드 드라이브를 선택한다.
 - Quick format을 선택한다
 - Volume label은 비워 둔다.
