@@ -8,7 +8,7 @@
 - Format을 클릭 후 Yes를 눌러 포맷을 시작한다.
 
 ### Write image file to Micro SD Card
-- 이미지를 다운로드 한다 : <br> https://developer.nvidia.com/jetson-nano-sd-card-image-r3231
+- 이미지(JetPack)를 다운로드 한다 : <br> https://developer.nvidia.com/jetson-nano-sd-card-image-r3231
 - Etcher를 다운로드 하여 설치한다 : <br> https://www.balena.io/etcher
 <br> ![EtcherSelectImage](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/EtcherSelectImage.PNG)
 -	Select Image를 클릭해 다운로드한 이미지 압축파일을 선택한다.
