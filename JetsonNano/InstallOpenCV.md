@@ -28,7 +28,7 @@ $ sudo apt-get install mesa-utils libgl1-mesa-dri libgtkgl2.0-dev libgtkglext1-d
 $ sudo apt-get install libatlas-base-dev gfortran libeigen3-dev
 ~~~
 
-# Install Python
+### Install Python
 ~~~
 $ sudo apt-get install python2.7-dev python3-dev python-numpy python3-numpy
 ~~~
