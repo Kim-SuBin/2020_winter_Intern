@@ -2,7 +2,7 @@
 
 ### Delete default OpenCV
 ~~~
-$ suudo apt-get remove libopencv*
+$ sudo apt-get remove libopencv*
 $ sudo apt-get autoremove
 $ sudo find /usr/local/ -name "*opencv*" -exec rm {} \;
 ~~~
