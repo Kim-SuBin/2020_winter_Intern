@@ -1,11 +1,15 @@
 # Python Path Change (Ubuntu)
 
-![whichPython](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/whichPython.PNG)
-
+### Check the python version
 ![pythonVersion](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/pythonVersion.PNG)
 
+### Check the location of python
+![whichPython](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/whichPython.PNG)
+
+### Check file pointing to '''ls -al /usr/bin/python'''
 ![pythonFile](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/pythonFile.PNG)
 
+### Check for different versions of Python executable via '''ls /usr/bin/ | grep python'''
 ![grepPython](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/grepPython.PNG)
 
 ![checkAlternatives](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/checkAlternatives.PNG)
