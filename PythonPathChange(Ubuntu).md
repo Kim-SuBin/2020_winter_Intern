@@ -1,5 +1,5 @@
 # Python Path Change (Ubuntu)
-
+참조 : https://codechacha.com/ko/change-python-version/ <br><br><br>
 ### Check the python version
 ![pythonVersion](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/pythonVersion.PNG)
 
