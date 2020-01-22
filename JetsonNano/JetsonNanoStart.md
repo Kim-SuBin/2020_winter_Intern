@@ -2,7 +2,7 @@
 
 ### Connection port
 - Connect a micro 5 pin A type, keyboard, mouse, monitor and power adapter ( + J48 pin) to Jetson Nano. <br>
-![JetsonNAno](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/JetsonNano.jpg)
+![connectionPort](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/JetsonNano.jpg)
 
 ### Start
 - press 'continue' <br>
