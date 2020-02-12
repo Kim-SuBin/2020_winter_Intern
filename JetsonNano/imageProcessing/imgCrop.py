@@ -44,7 +44,7 @@ def extractor(img, cnt):
 
 for j in range(0,len(img_file_list)):
     for i in range(0, 3):
-        image = "./img/{}".format(img_file_list[j])  # _1.JPG
+        image = "./img/{}".format(img_file_list[j]) 
         img = cv.imread(image, cv.IMREAD_COLOR)
         # print(vector_list[cnt], vector_list[cnt+1],vector_list[cnt+2], vector_list[cnt+3])
         cv.rectangle(img, (vector_list[cnt], vector_list[cnt+1]), (vector_list[cnt+2], vector_list[cnt+3]), red, 3) # Draw rectangle (Part of parking space)
