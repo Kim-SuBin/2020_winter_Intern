@@ -26,7 +26,7 @@ light_list = [0] * 3
 cnt = 0
 
 vector_list = []
-f = open("./vector/1.txt", "r")  # read mode
+f = open("./vector/vec.txt", "r")  # Read vector values
 while 1:
     line = f.readline()
     if not line:
@@ -37,6 +37,7 @@ while 1:
 
 
 def extractor(img, cnt):
+    # Crop image
     cropped_img = img[vector_list[cnt+1]:vector_list[cnt+3], vector_list[cnt]:vector_list[cnt+2]]
     return cropped_img
 
@@ -46,8 +47,8 @@ for j in range(0,len(img_file_list)):
         image = "./img/{}".format(img_file_list[j])  # _1.JPG
         img = cv.imread(image, cv.IMREAD_COLOR)
         # print(vector_list[cnt], vector_list[cnt+1],vector_list[cnt+2], vector_list[cnt+3])
-        cv.rectangle(img, (vector_list[cnt], vector_list[cnt+1]), (vector_list[cnt+2], vector_list[cnt+3]), red, 3)
+        cv.rectangle(img, (vector_list[cnt], vector_list[cnt+1]), (vector_list[cnt+2], vector_list[cnt+3]), red, 3) # Draw rectangle (Part of parking space)
         img = extractor(img, cnt)
-        file_name_path = './crop_img/' + str(j) + '_' + str(i) + '_' + 'test.JPG'
+        file_name_path = './crop_img/' + str(j) + '_' + str(i) + '_' + 'test.JPG' # Store crop image
         cv.imwrite(file_name_path, img)
         cnt = cnt + 4
