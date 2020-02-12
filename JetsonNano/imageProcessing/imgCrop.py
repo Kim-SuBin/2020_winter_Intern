@@ -47,7 +47,9 @@ class CROP:
                 cv.rectangle(img, (vector_list[cnt], vector_list[cnt + 1]),
                              (vector_list[cnt + 2], vector_list[cnt + 3]), red, 3)
                 img = extractor(img, cnt)
-                file_name_path = './crop_img/' + str(img_file_list[j]) + '_' + str(i) + '_' + 'test.JPG'
+                file_name = img_file_list[j].split('.')
+                print(file_name)
+                file_name_path = './crop_img/' + str(file_name[0]) + '_' +str(i) + '.' + str(file_name[-1])
                 cv.imwrite(file_name_path, img)
                 cnt = cnt + 4
 
