@@ -4,7 +4,7 @@ import cv2
 import time
 import datetime
 
-img = cv2.imread("img/MoonParkingLot.png", cv2.IMREAD_COLOR)
+img = cv2.imread("./parkingLotImg/MoonParkingLot.png", cv2.IMREAD_COLOR)
 
 parkingList = [(1180,303),(1180,269),(1180,244),(1180,218),(1180,183),
                (1180,156),(1180,129),(944,46),(919,46),(894,46),
