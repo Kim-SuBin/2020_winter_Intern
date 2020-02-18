@@ -40,7 +40,14 @@ class CROP:
             return cropped_img
 
         for j in range(0, len(img_file_list)):
-            for i in range(0, 3):
+            count = 0
+            while 1:
+                count+=1
+                if cnt > len(vector_list)-1:
+                    break
+                if vector_list[cnt] == -1:
+                    cnt += 1
+                    break
                 image = "./img/{}".format(img_file_list[j])  # _1.JPG
                 img = cv.imread(image, cv.IMREAD_COLOR)
                 # print(vector_list[cnt], vector_list[cnt+1],vector_list[cnt+2], vector_list[cnt+3])
@@ -49,7 +56,7 @@ class CROP:
                 img = extractor(img, cnt)
                 file_name = img_file_list[j].split('.')
                 print(file_name)
-                file_name_path = './crop_img/' + str(file_name[0]) + '_' +str(i) + '.' + str(file_name[-1])
+                file_name_path = './crop_img/' + str(file_name[0]) + '_' + str(count) + '.' + str(file_name[-1])
                 cv.imwrite(file_name_path, img)
                 cnt = cnt + 4
 
