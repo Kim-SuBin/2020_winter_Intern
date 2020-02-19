@@ -4,5 +4,5 @@
 <br> (자동차 도면 이미지가 저장된 parkingLotImg directory 필요)
 - imgCrop.py : 이미지를 rectangle로 crop하는 코드
 <br> (이미지가 저장된 img directory와 crop된 이미지가 저장될 crop_img directory 필요)
-- yolo_detection.py : yolo를 실행시킨 후 label을 보여주는 
-<br> (yolov3.cfg, yolov3.weights, coco.names )
+- yolo_object_detection.py : yolo를 실행시킨 후 label을 보여주는 
+<br> (yolov3.cfg, yolov3.weights, coco.names, crop_img directory  )
