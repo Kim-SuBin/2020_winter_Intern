@@ -26,14 +26,12 @@ class CROP:
         cnt = 0
 
         vector_list = []
-        f = open("vector/vec.txt", "r")  # read mode
-        while 1:
-            line = f.readline()
-            if not line:
-                break
-            else:
-                vector_list = line.split()
-                vector_list = [int(i) for i in vector_list]
+        f = open("./vector/vec.txt", "r")  # read mode
+        
+        line = f.readline()
+            
+        vector_list = line.split()
+        vector_list = [int(i) for i in vector_list]
 
         def extractor(img, cnt):
             cropped_img = img[vector_list[cnt + 1]:vector_list[cnt + 3], vector_list[cnt]:vector_list[cnt + 2]]
@@ -48,7 +46,7 @@ class CROP:
                 if vector_list[cnt] == -1:
                     cnt += 1
                     break
-                image = "./img/{}".format(img_file_list[j])  # _1.JPG
+                image = ("./img/"+str(img_file_list[j]))  # _1.JPG
                 img = cv.imread(image, cv.IMREAD_COLOR)
                 # print(vector_list[cnt], vector_list[cnt+1],vector_list[cnt+2], vector_list[cnt+3])
                 cv.rectangle(img, (vector_list[cnt], vector_list[cnt + 1]),
