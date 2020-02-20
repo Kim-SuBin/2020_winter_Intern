@@ -17,3 +17,6 @@ while True:
         for i in parkingList:
             message += str(i)
         serverSock.sendto(message.encode(), addr)
+
+
+
