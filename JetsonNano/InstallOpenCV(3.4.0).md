@@ -1,4 +1,4 @@
-# [Install OpenCV](https://j-remind.tistory.com/57?category=693866)
+# [Install OpenCV 3.4.0](https://j-remind.tistory.com/57?category=693866)
 
 ### Delete default OpenCV
 ~~~
