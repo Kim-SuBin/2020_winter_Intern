@@ -13,7 +13,7 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ~~~
 
-# Install package
+### Install package
 ~~~
 $ sudo apt-get install build-essential cmake
 $ sudo apt-get install pkg-config
