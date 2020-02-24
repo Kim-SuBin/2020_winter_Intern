@@ -27,25 +27,28 @@ $ sudo apt-get install libatlas-base-dev gfortran libeigen3-dev
 $ sudo apt-get install python2.7-dev python3-dev python-numpy python3-numpy
 ~~~
 
-### Install OpenCV
+### Create opencv directory
 ~~~
 $ mkdir opencv
 $ cd opencv
 ~~~
-Download OpenCV 4.0.1
+
+### Download OpenCV 4.0.1
 ~~~
 $ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.1.zip
 $ unzip opencv.zip
 $ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.1.zip
 $ unzip opencv_contrib.zip
 ~~~
-Create build directory
+
+### Create build directory
 ~~~
 $ cd opencv-4.0.1/
 $ mkdir build
 $ cd build
 ~~~
-Build configuration
+
+### Build configuration
 ~~~
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -77,15 +80,18 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \
 ../
 ~~~
+
 ### Compile
 ~~~
 $ make -j4
 ~~~
-### Install compile results
+
+### Install OpenCV
 ~~~
 $ sudo make install
 $ sudo sh -c echo '/usr/local/lib/' > sudo /etc/ld.so.conf.d/opencv.conf
 $ sudo ldconfig
 ~~~
+
 ### Check OpenCV
 ![check_opencv](https://github.com/Kim-SuBin/2020_winter_Intern/blob/master/img/checkOpenCV.png)
