@@ -52,30 +52,25 @@ class PROCESSING:
                 pygame.display.flip()
                 clientSock.sendto("start".encode(), (UDP_IP, UDP_PORT))
                 data, addr = clientSock.recvfrom(1024)
-                yolo_detection = data.decode()
+                yolo_detection = data.decode() # yolo result
                 yolo_detection = [int(i) for i in yolo_detection]
+                check = [0] * len(yolo_detection) # in, not in check
                 print("주차 가능:", len(parkingList) - sum(yolo_detection), "/", len(parkingList))
 
                 for i in range(len(yolo_detection)):
+                    carArray = numpy.array(carTable)
                     if yolo_detection[i]:
                         if len(carTable) == 0:
-                            now = datetime.datetime.now()
-                            carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
-                            pygame.draw.circle(screen, (225, 0, 0), parkingList[i], 5)
-                            # cv2.circle(img, parkingList[i], 5, (0, 0, 255), -1)  # Create red circle
+                            check[i] = 1
                         else:
                             for j in range(len(carTable)):
                                 carArray = numpy.array(carTable)
                                 if str(i) not in carArray[:, 0]:
-                                    now = datetime.datetime.now()
-                                    carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
-                                    pygame.draw.circle(screen, (225, 0, 0), parkingList[i], 5)
-                                else:
-                                    if carArray[:, 0][j] == i and carArray[:, 2][j] != str(0):
-                                        now = datetime.datetime.now()
-                                        carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
-                                        pygame.draw.circle(screen, (225, 0, 0), parkingList[i], 5)
-
+                                    check[i] = 1
+                                elif carArray[:, 0][j] == str(i) and carArray[:, 2][j] == str(0):
+                                    check[i] = 0
+                                elif carArray[:, 0][j] == str(i) and carArray[:, 2][j] != str(0):
+                                    check[i] = 1
                     else:
                         for j in range(len(carTable)):
                             if carTable[j][0] == i and carTable[j][2] == 0:
@@ -83,6 +78,10 @@ class PROCESSING:
                                 carTable[j][2] = now.strftime('%Y-%m-%d %H:%M:%S')
                         pygame.draw.circle(screen, (0,255,0), parkingList[i], 5)
                         # cv2.circle(img, parkingList[i], 5, (0, 255, 0), -1)  # Create green circle
+                for i in range(len(check)):
+                    if check[i]:
+                        now = datetime.datetime.now()
+                        carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
                 df = pd.DataFrame(carTable, columns=['주차구역', '입차', '출차'])
                 print(df)
         pygame.quit()
