@@ -76,12 +76,13 @@ class PROCESSING:
                             if carTable[j][0] == i and carTable[j][2] == 0:
                                 now = datetime.datetime.now()
                                 carTable[j][2] = now.strftime('%Y-%m-%d %H:%M:%S')
-                        pygame.draw.circle(screen, (0,255,0), parkingList[i], 5)
+                        pygame.draw.circle(screen, (0, 255, 0), parkingList[i], 5)
                         # cv2.circle(img, parkingList[i], 5, (0, 255, 0), -1)  # Create green circle
                 for i in range(len(check)):
                     if check[i]:
                         now = datetime.datetime.now()
                         carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
+                        pygame.draw.circle(screen, (255, 0, 0), parkingList[i], 5)
                 df = pd.DataFrame(carTable, columns=['주차구역', '입차', '출차'])
                 print(df)
         pygame.quit()
