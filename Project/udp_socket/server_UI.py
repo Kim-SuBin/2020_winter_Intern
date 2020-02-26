@@ -20,5 +20,3 @@ while True:
 
 
 
-
-
