@@ -83,7 +83,7 @@ class PROCESSING:
                         now = datetime.datetime.now()
                         carTable.append([i, now.strftime('%Y-%m-%d %H:%M:%S'), 0])
                         pygame.draw.circle(screen, (255, 0, 0), parkingList[i], 5)
-                df = pd.DataFrame(carTable, columns=['주차구역', '입차', '출차'])
+                df = pd.DataFrame(carTable, columns=['주차', '입차', '출차'])
                 print(df)
         pygame.quit()
 
